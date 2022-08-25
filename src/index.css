@@ -1,13 +1,170 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background-bg: #23252C;
+  --main-color: #1A1B21;
+  --section-title-color: #F5F5F5;
+  --section-para-color: #DCDCDC;
+  --emailBtn-color: #D1D5DB;
+  --linkedinBtn-color: #5093E2;
+  --black: #161619;
+  --white: #FFFFFF;
+  --icons-color: #918E9B;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 500px;
+  height: 870px;
+  background: var(--background-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 320px;
+  background: var(--main-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info > #profile-picture {
+  background-color: pink;
+  width: 320px;
+  height: 320px;
+  border-radius: 10px 10px 0px 0px;
+  background: url("./shaun.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.info > h1 {
+  font-size: 25px;
+  color: var(--white);
+}
+
+.info > h3 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #F3BF99;
+  margin-bottom: 9px;
+}
+
+.info > h5 {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--section-title-color);
+}
+
+.info > .buttons {
+  margin-top: 15px;
+  padding-right: 35px;
+  padding-left: 35px;
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 1rem;
+}
+
+.info > .buttons > button {
+  border-style: none;
+  width: 115px;
+  padding: 9px 13px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.info > .buttons > button:hover {
+  transform: scale(1.1);
+  transition: 0.25s;
+}
+
+.info > .buttons > .email,
+.info > .buttons > .linkedin {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.info > .buttons > .email {
+  background: var(--emailBtn-color);
+  color: var(--black);
+}
+
+.info > .buttons > .linkedin {
+  background: var(--linkedinBtn-color);
+  color: var(--white);
+  
+}
+
+.about,
+.interests{
+  display: flex;
+  flex-direction: column;
+  padding-right: 35px;
+  padding-left: 35px;
+  margin-bottom: 35px;
+
+}
+
+.about > h2,
+.interests > h2 {
+  font-size: 20px;
+  color: var(--section-title-color);
+}
+
+.about > p,
+.interests > p {
+  font-size: 12px;
+  color: var(--section-para-color);
+  line-height: 15px;
+  text-align: justify;
+}
+
+footer {
+  background: var(--black);
+  width: 320px;
+  padding: 1rem;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer > button {
+  background: inherit;
+  color: var(--icons-color);
+  border-style: none;
+  font-size: 25px;
+}
+
+footer > button:hover {
+  transform: scale(1.2);
+  transition: 0.25s;
 }
