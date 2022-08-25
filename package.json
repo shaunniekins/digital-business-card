@@ -1,6 +1,6 @@
 {
-  "homepage": "http://shaunniekins.github.io/digital-business-card",
-  "name": "learn-react-02",
+  "homepage": "https://shaunniekins.github.io/digital-business-card",
+  "name": "digital-business-card",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
